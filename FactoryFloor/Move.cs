@@ -15,7 +15,7 @@ namespace FactoryFloor
 
             try
             {
-                var moves = moveSeq.Split(',');
+                string[] moves = SplitTheString(moveSeq);
 
                 foreach (var move in moves)
                 {
@@ -61,6 +61,11 @@ namespace FactoryFloor
             }
 
             return string.Empty;
+        }
+
+        private string[] SplitTheString(string moveSeq)
+        {
+            return moveSeq.Split(',');
         }
     }
 }
